@@ -7,27 +7,28 @@
     <title>DISHU DAKSH Portfolio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <nav>
-        <div class="nav-container" id="home">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-                <span>|)AKSH </span>
+<body id="home">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-text">|)AKSH</span>
             </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="navbar-links" id="navbarLinks">
+                <a href="#home" class="menu-item"><i class="fas fa-home"></i></a>
+                <a href="#user" class="menu-item"><i class="fas fa-user"></i></a>
+                <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i></a>
+                <a href="#folder" class="menu-item"><i class="fas fa-folder"></i></a>
+                <a href="#trophy" class="menu-item"><i class="fas fa-trophy"></i></a>
+            </ul>
         </div>
     </nav>
-
-    <div class="sidebar">
-        <a href="#home" class="menu-item"><i class="fas fa-home"></i></a>
-        <a href="#user" class="menu-item"><i class="fas fa-user"></i></a>
-        <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i></a>
-        <a href="#folder" class="menu-item"><i class="fas fa-folder"></i></a>
-        <a href="#trophy" class="menu-item"><i class="fas fa-trophy"></i></a>
-    </div>
 
     <section>
         <div class="main-container">
@@ -42,7 +43,7 @@
                     <span>DATA ANALYST</span>
                 </h3><br>
                 <div class="btn" data-aos="zoom-out-left" data-aos-duration="800" data-aos-delay="700">
-                    <a href="DISHU NEW.pdf" download>
+                    <a href="Dishu Daksh Resume.pdf" download>
                         <button>Download CV</button>
                     </a>
                 </div>
@@ -133,7 +134,8 @@
             <a
                 href="https://github.com/dishu-13/OIBSIP/tree/3beae94f29c5a9b3477d62fcf18702c7d1ac855f/Project%203%20(%20%20House%20%20Prediction%20)">
                 <div class="certificate-card" data-aos="zoom-in" data-aos-delay="400">
-                    <p class="projectlayout"><img src="project 3.png" alt="pro 3"><b>HOUSE PRICE PREDICTION</b><br><br>The
+                    <p class="projectlayout"><img src="project 3.png" alt="pro 3"><b>HOUSE PRICE
+                            PREDICTION</b><br><br>The
                         objective is to build a machine learning model to estimate house prices
                         based on key features. The process includes data cleaning, feature selection, model training,
                         and
@@ -185,20 +187,22 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            offset: 0,
-            once: false
+        AOS.init({ offset: 0, once: false });
+
+        const hamburger = document.getElementById('hamburger');
+        const navbarLinks = document.getElementById('navbarLinks');
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navbarLinks.classList.toggle('show');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navbarLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                navbarLinks.classList.remove('show');
+            }
         });
     </script>
-
-    <script>
-        function hamburg() {
-            const navbar = document.querySelector(".dropdown");
-            navbar.style.transform = "translateY(0px)";
-        }
-        function cancel() {
-            const navbar = document.querySelector(".dropdown");
-            navbar.style.transform = "translateY(-500px)";
-        }
-    </script>
 </body>
+
+</html>
