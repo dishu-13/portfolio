@@ -17,15 +17,13 @@
             <div class="navbar-logo">
                 <span class="logo-text">|)AKSH</span>
             </div>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
             <ul class="navbar-links" id="navbarLinks">
                 <a href="#home" class="menu-item"><i class="fas fa-home"></i></a>
                 <a href="#user" class="menu-item"><i class="fas fa-user"></i></a>
-                <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i></a>
                 <a href="#folder" class="menu-item"><i class="fas fa-folder"></i></a>
                 <a href="#trophy" class="menu-item"><i class="fas fa-trophy"></i></a>
+                <a href="#contact" class="menu-item"><i class="fas fa-envelope"></i></a>
+
             </ul>
         </div>
     </nav>
@@ -92,16 +90,6 @@
                 new tools and techniques in the field.
             </p>
         </div>
-    </section>
-
-    <section class="certificates-section" id="contact">
-        <h2 class="title" data-aos="fade-up" data-aos-duration="1000">Contact <span> Me</span></h2><br>
-        <div class="contact" data-aos="fade-up">
-            <p><span class="icon">📞</span> Contact Number - 7500700277</p>
-            <p><span class="icon">✉️</span> Email - dishudaksh44@gamil.com</p>
-            <p><span class="icon">📍</span> Address - Rudrapur, Uttrakhand, India</p>
-        </div>
-
     </section>
 
     <section class="certificates-section" id="folder">
@@ -174,6 +162,40 @@
 
         </div>
     </section>
+    <section class="contact-section" id="contact">
+        <h2 class="title" data-aos="fade-up" data-aos-duration="1000">Contact <span> Me</span></h2><br>
+
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                <h2>GET IN TOUCH</h2>
+
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div><a href="mailto:dishudaksh44@gmail.com">dishudaksh44@gmail.com</a></div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>Rudrapur, Uttarakhand, India</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <div><a href="tel:+917500700277">+91 7500700277</a></div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm" data-aos="fade-up" data-aos-delay="400">
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="text" placeholder="Subject" required />
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-social">
@@ -189,18 +211,16 @@
     <script>
         AOS.init({ offset: 0, once: false });
 
-        const hamburger = document.getElementById('hamburger');
-        const navbarLinks = document.getElementById('navbarLinks');
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("messageStatus");
 
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navbarLinks.classList.toggle('show');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!navbarLinks.contains(e.target) && !hamburger.contains(e.target)) {
-                navbarLinks.classList.remove('show');
-            }
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            form.reset();
+            status.style.display = "block";
+            setTimeout(() => {
+                status.style.display = "none";
+            }, 3000);
         });
     </script>
 </body>
