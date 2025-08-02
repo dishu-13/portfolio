@@ -166,7 +166,7 @@
         <h2 class="title" data-aos="fade-up" data-aos-duration="1000">Contact <span> Me</span></h2><br>
 
         <div class="contact-container">
-            <!-- Contact Info -->
+          
             <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
                 <h2>GET IN TOUCH</h2>
 
@@ -186,14 +186,26 @@
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <form class="contact-form" id="contactForm" data-aos="fade-up" data-aos-delay="400">
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
-                <input type="text" placeholder="Subject" required />
-                <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit">SEND MESSAGE</button>
-            </form>
+          
+           <form class="contact-form" id="contactForm"
+      action="https://formsubmit.co/dishudaksh44@gmail.com"
+      method="POST"
+      data-aos="fade-up" data-aos-delay="400">
+      
+  
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+
+
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="subject" placeholder="Subject" required />
+    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+
+    <button type="submit">SEND MESSAGE</button>
+</form>
+
         </div>
     </section>
 

@@ -87,7 +87,7 @@ a {
     transform: scale(1.2);
 }
 
-/* Main */
+
 .main-container {
     display: flex;
     justify-content: space-evenly;
@@ -134,7 +134,6 @@ a {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Paragraph */
 .para {
     text-align: justify;
     padding: 4rem 10%;
@@ -142,7 +141,6 @@ a {
     line-height: 1.8;
 }
 
-/* Skills Section */
 .skill {
     text-align: center;
     font-size: 20px;
@@ -180,7 +178,6 @@ a {
     text-align: left;
 }
 
-/* Section Titles */
 .title {
     text-align: center;
     font-size: 32px;
@@ -194,7 +191,6 @@ a {
     font-style: italic;
 }
 
-/* Certificates / Projects */
 .certificates-section {
     text-align: center;
     margin: 50px 0;
@@ -233,7 +229,6 @@ a {
     padding: 3%;
 }
 
-/* Contact Section */
 .contact-section {
     padding: 80px 5% 100px;
     background-color: var(--light);
@@ -312,9 +307,6 @@ a {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* Footer */
 footer {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     color: var(--text-light);
@@ -348,7 +340,6 @@ footer {
     opacity: 0.7;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
