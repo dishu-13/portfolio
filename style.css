@@ -30,6 +30,10 @@ body {
     padding-top: 100px;
     color: var(--text-dark);
     line-height: 1.6;
+         background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='dots' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'><circle cx='1' cy='1' r='1' fill='%23000' /></pattern></defs><rect width='100%' height='100%' fill='url(%23dots)'/></svg>");
+  background-size: 40000px 40000px;
+  background-repeat: repeat;
 }
 
 /* General Elements */
@@ -61,6 +65,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .navbar-logo .logo-text {
@@ -94,6 +99,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     padding: 50px 5%;
+    
 }
 
 .main-container .image img {
@@ -139,6 +145,8 @@ a {
     padding: 4rem 10%;
     font-size: 1rem;
     line-height: 1.8;
+    background: linear-gradient(180deg,white, #4cc9f0, #fafcfc);
+
 }
 
 .skill {
@@ -232,6 +240,9 @@ a {
 .contact-section {
     padding: 80px 5% 100px;
     background-color: var(--light);
+    background: linear-gradient(180deg,white, #4cc9f0, #4cc9f0);
+
+    
 }
 
 .contact-container {
@@ -241,6 +252,8 @@ a {
     gap: 50px;
     max-width: 1100px;
     margin: auto;
+    
+    
 }
 
 .contact-info {
@@ -269,7 +282,7 @@ a {
 }
 
 .info-item .icon {
-    color: var(--primary);
+    color: #9706f8;
     font-size: 18px;
 
 }
@@ -294,7 +307,7 @@ a {
 .contact-form button {
     padding: 12px 20px;
     border: none;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: linear-gradient(135deg, var(--accent));
     color: var(--text-light);
     font-weight: 700;
     border-radius: 50px;
@@ -308,7 +321,7 @@ a {
 }
 
 footer {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: linear-gradient(180deg,#4ac7ec, #44cef8, #9706f8);
     color: var(--text-light);
     padding: 50px;
     text-align: center;
